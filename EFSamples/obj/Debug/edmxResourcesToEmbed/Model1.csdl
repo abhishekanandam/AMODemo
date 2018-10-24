@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GridExampleMVCModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Asset">
+    <Key>
+      <PropertyRef Name="AssetID" />
+    </Key>
+    <Property Name="AssetID" Type="Guid" Nullable="false" />
+    <Property Name="Barcode" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FacilitySite" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PMGuide" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AstID" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ChildAsset" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GeneralAssetDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecondaryAssetDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <Property Name="Manufacturer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ModelNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Building" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Floor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Corridor" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RoomNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MERNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="EquipSystem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Issued" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="GridExampleMVCEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Assets" EntityType="Self.Asset" />
+  </EntityContainer>
+</Schema>

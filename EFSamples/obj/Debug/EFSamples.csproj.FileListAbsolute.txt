@@ -1,0 +1,10 @@
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\bin\Debug\EFSamples.exe.config
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\bin\Debug\EFSamples.exe
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\bin\Debug\EFSamples.pdb
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\bin\Debug\EntityFramework.dll
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\bin\Debug\EntityFramework.SqlServer.dll
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\bin\Debug\EntityFramework.xml
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\bin\Debug\EntityFramework.SqlServer.xml
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\obj\Debug\EFSamples.csprojResolveAssemblyReference.cache
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\obj\Debug\EFSamples.exe
+C:\Abhishek\SampleProjects\AMODemo\EFSamples\obj\Debug\EFSamples.pdb

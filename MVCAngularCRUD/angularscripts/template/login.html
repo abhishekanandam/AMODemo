@@ -1,0 +1,32 @@
+﻿<div class="container">
+    <menu-Bar></menu-Bar>
+</div>
+<div class="container">
+    <h4>Login</h4><br />
+    <form name="loginForm" method="post" class="form-horizontal" ng-controller="loginController" novalidate>
+
+        <div class="form-group">
+            <label for="inputUserName" class="control-label col-xs-2">User Name:</label>
+            <div class="col-xs-3">
+                <input type="text" name="username" ng-model="credentials.username" class="form-control" id="inputUserName" placeholder="User Name" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="loginForm.username.$error.required">Username is required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Password:</label>
+            <div class="col-xs-3">
+                <input type="password" name="password" ng-model="credentials.password" class="form-control" id="inputPassword" placeholder="Password" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="loginForm.password.$error.required">Password is required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-2 col-sm-offset-3">
+                <input type="button" value="Submit" class="form-control btn-info" ng-click="login(credentials)" />
+            </div>
+        </div>
+    </form>
+</div>

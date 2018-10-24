@@ -1,0 +1,6 @@
+C:\Abhishek\SampleProjects\AMODemo\DesignPatternsDemo\bin\Debug\DesignPatternsDemo.exe.config
+C:\Abhishek\SampleProjects\AMODemo\DesignPatternsDemo\bin\Debug\DesignPatternsDemo.exe
+C:\Abhishek\SampleProjects\AMODemo\DesignPatternsDemo\bin\Debug\DesignPatternsDemo.pdb
+C:\Abhishek\SampleProjects\AMODemo\DesignPatternsDemo\obj\Debug\DesignPatternsDemo.csprojResolveAssemblyReference.cache
+C:\Abhishek\SampleProjects\AMODemo\DesignPatternsDemo\obj\Debug\DesignPatternsDemo.exe
+C:\Abhishek\SampleProjects\AMODemo\DesignPatternsDemo\obj\Debug\DesignPatternsDemo.pdb

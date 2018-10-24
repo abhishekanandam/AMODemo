@@ -1,0 +1,5 @@
+C:\Abhishek\SampleProjects\AMODemo\UOW\bin\Debug\UOW.dll
+C:\Abhishek\SampleProjects\AMODemo\UOW\bin\Debug\UOW.pdb
+C:\Abhishek\SampleProjects\AMODemo\UOW\obj\Debug\UOW.csprojResolveAssemblyReference.cache
+C:\Abhishek\SampleProjects\AMODemo\UOW\obj\Debug\UOW.dll
+C:\Abhishek\SampleProjects\AMODemo\UOW\obj\Debug\UOW.pdb

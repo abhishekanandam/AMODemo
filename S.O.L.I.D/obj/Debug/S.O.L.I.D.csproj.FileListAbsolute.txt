@@ -1,0 +1,8 @@
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\bin\Debug\S.O.L.I.D.exe.config
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\bin\Debug\S.O.L.I.D.exe
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\bin\Debug\S.O.L.I.D.pdb
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\obj\Debug\S.O.L.I.D.exe
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\obj\Debug\S.O.L.I.D.pdb
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\bin\Debug\System.ValueTuple.dll
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\bin\Debug\System.ValueTuple.xml
+C:\Abhishek\SampleProjects\AMODemo\S.O.L.I.D\obj\Debug\S.O.L.I.D.csprojResolveAssemblyReference.cache

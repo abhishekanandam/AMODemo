@@ -1,0 +1,159 @@
+﻿<div class="container">
+    <form name="demoForm" class="form-horizontal">
+        <h4>{{formCtrl.title}}</h4>
+
+        <div class="form-group">
+            <label for="inputFirstName" class="control-label col-xs-2">First Name:</label>
+            <div class="col-xs-7">
+                <input type="text" name="firstname" ng-model="formCtrl.firstName" class="form-control" id="inputFirstName" placeholder="First Name" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.firstname.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputLastName" class="control-label col-xs-2">Last Name:</label>
+            <div class="col-xs-7">
+                <input type="text" name="lastname" ng-model="formCtrl.lastName" class="form-control" id="inputLastName" placeholder="Last Name" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.lastname.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputUserName" class="control-label col-xs-2">Username:</label>
+            <div class="col-xs-7">
+                <input type="text" name="username" ng-model="formCtrl.userName" exists class="form-control" id="inputUserName" placeholder="Username" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.username.$error.required">Required!</span>
+                <span class="label-danger" ng-show="demoForm.username.$pending.exists">Validating ....</span>
+                <span class="label-danger" ng-show="demoForm.username.$error.exists">Already exists, try another</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputDOB" class="control-label col-xs-2">Date Of Birth:</label>
+            <div class="col-xs-7">
+                <input type="text" name="dob" placeholder="Date Of Birth" class="form-control input-sm" ng-model="formCtrl.dateValue" date-Picker ng-required="true"/>
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.dob.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputGender" class="control-label col-xs-2">Gender:</label>
+            <div class="col-xs-2" ng-repeat="g in formCtrl.gender">
+                <input type="radio" name="gender" value="{{g.Value}}" id="inputGender" ng-model="formCtrl.selectedGender" ng-required="true">
+                <label>{{g.name}}</label>
+            </div>
+            <div class="col-xs-3 col-sm-offset-3">
+                <span class="label-danger" ng-show="demoForm.gender.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAge" class="control-label col-xs-2">Age:</label>
+            <div class="col-xs-2">
+                <input class="form-control" type="number" name="age" id="inputAge" ng-pattern="/^[0-9]$/" placeholder="Age" ng-model="formCtrl.age" max="100" min="1" ng-required="true" prevent-Greater-Value>
+            </div>
+            <div class="col-xs-3 col-sm-offset-5">
+                <span class="label-danger" ng-show="demoForm.age.$error.required">Required!</span>
+                <span class="label-danger" ng-show="demoForm.age.$error.pattern">Invalid Age!</span>
+                <span class="label-danger" ng-show="demoForm.age.$error.min">Minimum age should be 1!</span>
+                <span class="label-danger" ng-show="demoForm.age.$error.max">Maximum age should be 100!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEdu" class="control-label col-xs-2">Higher Education:</label>
+            <div class="col-xs-2">
+                <select name="education" class="form-control" ng-options="education.name for education in formCtrl.educationDetails" ng-model="formCtrl.selectedEducation" ng-required="true">
+                    <option value="">--Select--</option>
+                </select>
+            </div>
+            <div class="col-xs-3 col-sm-offset-5">
+                <span class="label-danger" ng-show="demoForm.education.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputSource" class="control-label col-xs-2">Source:</label>
+            <div class="col-xs-2">
+                <select name="source" class="form-control" ng-model="formCtrl.selectedSource" ng-required="true">
+                    <option value="">--Select--</option>
+                    <option value="{{s.Value}}" id="inputSource" ng-repeat="s in formCtrl.source">
+                        {{s.name}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-xs-3 col-sm-offset-5">
+                <span class="label-danger" ng-show="demoForm.source.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputEmail" class="control-label col-xs-2">E-mail:</label>
+            <div class="col-xs-7">
+                <input type="email" name="email" ng-model="formCtrl.email" ng-pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" class="form-control" id="inputEmail" placeholder="E-mail" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.email.$error.required">Required!</span>
+                <span class="label-danger" ng-show="demoForm.email.$invalid">Invalid!</span>
+                <span class="label-danger" ng-show="demoForm.email.$error.pattern">Invalid e-mail id!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputNumber" class="control-label col-xs-2">Mobile Number:</label>
+            <div class="col-xs-7">
+                <input type="number" maxlength="10" name="number" ng-pattern="/^[7-9][0-9]{9}$/" ng-model="formCtrl.number" class="form-control" id="inputEmail" placeholder="Number" ng-required="true" prevent-Max-Length>
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.number.$error.required">Required!</span>
+                <span class="label-danger" ng-show="demoForm.number.$error.pattern && demoForm.number.$invalid">Invalid mobile number!</span>
+                <span class="label-danger" ng-show="demoForm.number.$error.maxlength">Mobile number should be of 10 digits!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddess" class="control-label col-xs-2">Address:</label>
+            <div class="col-xs-7">
+                <input type="text" name="address" ng-model="formCtrl.address" class="form-control" id="inputAddess" placeholder="Address" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.address.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputZipCode" class="control-label col-xs-2">Zip Code:</label>
+            <div class="col-xs-7">
+                <input type="number" name="zipcode" ng-model="formCtrl.zipcode" ng-pattern="/^[1-9][0-9]{5}$/" class="form-control" ng-maxlength="6" ng-minlength="6" id="inputZipCode" placeholder="Zip Code" ng-required="true" prevent-Max-Length>
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.zipcode.$error.required">Required!</span>
+                <span class="label-danger" ng-show="demoForm.zipcode.$error.minlength">Minimum length should be 6</span>
+                <span class="label-danger" ng-show="demoForm.zipcode.$error.maxlength">Maximum length should be 6</span>
+                <span class="label-danger" ng-show="demoForm.zipcode.$error.pattern">Invalid zip code!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-3 col-sm-offset-2">
+                <input type="checkbox" name="terms" ng-model="formCtrl.terms" id="inputTerms" ng-required="true">
+                <label for="inputTerms">I agree to the terms and conditions</label>
+            </div>
+            <div class="col-xs-3 col-sm-offset-4">
+                <span class="label-danger" ng-show="demoForm.terms.$error.required">Required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-3 col-sm-offset-6">
+                <input type="button" value="Submit" class="form-control btn-info" ng-disabled="demoForm.firstname.$pristine && demoForm.firstname.$invalid ||
+                        demoForm.lastname.$pristine && demoForm.lastname.$invalid || 
+                        demoForm.email.$pristine && demoForm.email.$invalid || 
+                        demoForm.address.$pristine && demoForm.address.$invalid ||
+                        demoForm.number.$pristine && demoForm.number.$invalid ||
+                        demoForm.terms.$pristine && demoForm.terms.$invalid" ng-click="formCtrl.formValidation()" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-3 col-sm-offset-4">
+                <label class="label-info" ng-show="formCtrl.valid">{{formCtrl.validationMsg}}</label>
+            </div>
+        </div>
+
+    </form>
+</div>

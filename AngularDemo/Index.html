@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html ng-app="mainApp">
+<head>
+    <title>Angular Route Demo</title>
+    <meta charset="utf-8" />
+    <script src="../../Scripts/jquery-2.2.4.min.js"></script>
+    <script src="../../Scripts/jquery-ui.min.js"></script>
+    <link href="../../Scripts/jquery-ui.min.css" rel="stylesheet" />
+    <link href="../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../Scripts/bootstrap.min.js"></script>
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="../../Scripts/angular-route.min.js"></script>
+    <link href="../../Scripts/angular-table.min.css" rel="stylesheet" />
+    <script src="../../Scripts/angular-tables.min.js"></script>
+    <script src="../../Scripts/angular-ui-grid.js"></script>
+    <link href="../../Scripts/angular-ui-grid.css" rel="stylesheet" />
+    <script src="../../angularscripts/app/mainapp.js"></script>
+    <script src="../../angularscripts/controller/navbarcontroller.js"></script>
+    <script src="../../angularscripts/controller/homecontroller.js"></script>
+    <script src="../../angularscripts/controller/aboutcontroller.js"></script>
+    <script src="../../angularscripts/controller/contactcontroller.js"></script>
+    <script src="../../angularscripts/directive/customdirective.js"></script>
+    <script src="../../angularscripts/controller/formdemocontroller.js"></script>
+    <script src="../../angularscripts/factory/demofactory.js"></script>
+    <script src="../../angularscripts/service/demoservice.js"></script>
+    <script src="../../angularscripts/provider/demoprovider.js"></script>
+    <script src="../../angularscripts/directive/preventgreatervalue.js"></script>
+    <script src="../../angularscripts/directive/preventmaxlength.js"></script>
+    <script src="../../angularscripts/directive/datepicker.js"></script>
+    <script src="../../angularscripts/directive/alreadyexist.js"></script>
+    <script src="../../angularscripts/controller/otherdemocontroller.js"></script>
+    <script src="../../angularscripts/component/componentdemo.js"></script>
+    <script src="../../angularscripts/directive/advanceddirective.js"></script>
+    <script src="../../angularscripts/component/herolist.js"></script>
+    <script src="../../angularscripts/component/herodetail.js"></script>
+    <script src="../../angularscripts/component/editablefield.js"></script>
+    <script src="../../Scripts/angular-messages.min.js"></script>
+    <!--<link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bower/ngtoast/dist/ngToast.min.css">-->
+
+    <!--<script src="bower/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="bower/ngtoast/dist/ngToast.min.js"></script>-->
+    <base href="/">
+    
+
+</head>
+<!-- define angular controller -->
+<body ng-controller="navBarController">
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">{{brandName}}</a>
+                </div>
+
+                <ul class="nav navbar-nav navbar-left" ng-repeat="menuItem in menuItems">
+                    <li><a href="{{menuItem.href}}">{{menuItem.name}}</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="register">Register</a></li>
+                    <li><a href="login">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <span ng-bind="serviceName"></span>
+        <span ng-bind="factoryName"></span>
+        <span ng-bind="providerName"></span>
+    </div>
+    <div class="container">
+        <span ng-bind="id" ng-model="id"></span>
+        <span ng-bind="firstName" ng-model="firstName"></span>
+        <span ng-bind="lastName" ng-model="lastName"></span>
+        <span ng-bind="fullName()" ng-model="fullName()"></span>
+    </div>
+    <div class="container" custom-directive="" id="id" f-name="{{firstName}}" l-name="lastName" full-name="fullName()">
+        This is actual element data.
+    </div>
+    <!--<custom-directive id="id" f-name="{{firstName}}" l-name="lastName" full-name="fullName()">
+    </custom-directive>-->
+    <div id="main">
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <ng-view></</ng-view>>
+
+    </div>
+
+    <div class="container">
+        <h3>ng-repeat start and end demo</h3>
+        <table>
+            <tr ng-repeat-start="e in employees">
+                <td> <b> {{e.department}} </b></td>
+            </tr>
+            <tr ng-repeat="emp in e.employee">
+                <td> <b>Name: </b>{{emp.Name}} </td><td> <b>Id: </b> {{emp.Id}} </td>
+            </tr>
+            <tr ng-repeat-end>
+                <td> ================ </td> 
+            </tr>
+        </table>
+    </div>
+
+    <div class="container body-content">
+        <footer>
+            <component-Demo footer="{{footer}}"></component-Demo>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+﻿<div class="container">
+    {{homePage}}
+
+    <a href="home/1">Accessing Parameters Through Route Params</a>
+
+    {{routeParam}}
+    <br />
+    Factory Data:
+    <ul ng-repeat="artist in factoryData.artistData">
+        <li>{{artist}}</li>
+    </ul>
+
+    <br />
+    Service Data: {{serviceData.artistData}}
+</div>

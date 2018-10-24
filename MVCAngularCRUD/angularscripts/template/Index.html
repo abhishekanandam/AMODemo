@@ -1,0 +1,37 @@
+﻿<body ng-controller="indexController">
+    <div class="container">
+        <menu-Bar></menu-Bar>
+    </div>
+    <div class="container">
+        <input type="text" class="form-control" ng-model="body" ng-bind="body" />
+    </div>
+
+    <div class="container">
+        <!--The main accordion component-->
+        <accordion body="body">
+            <!--The first panel with heading 1-->
+            <accordion-panel heading="Panel 1">
+                This is first panel
+            </accordion-panel>
+            <!--The secoind panel with heading 2-->
+            <accordion-panel heading="Panel 2">
+                This is second panel
+            </accordion-panel>
+        </accordion>
+    </div>
+
+    <div class="card">
+        <h4>Inter-component communication</h4>
+        <br />
+
+        <div class="container">
+            <parent-Component></parent-Component>
+        </div>
+
+    </div>
+
+    <div>
+        
+    </div>
+
+</body>

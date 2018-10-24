@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<body>
+    <div>
+        <table id="Demogrid"></table>
+        <div id="pager"></div>
+    </div>
+</body>
+
+@section Scripts{
+
+    <script>
+
+        $(function () {
+
+            $("#Demogrid").jqGrid({
+                
+                url: "/JqueryGrid/GetData",
+                datatype: "json",
+                mtype: "GET",
+                colNames: ['AssetID', 'Barcode', 'SerialNumber', 'Manufacturer', 'RoomNo'],
+                colModel: [
+                    {
+                        name: 'AssetID',
+                        editable: true,
+                        key: true,
+                        hidden: true,
+                        search: false
+                    },
+                    {
+                        name: "Barcode", editable: true, editrules: { required: true }, search: true
+                    },
+                    {
+                        name: "SerialNumber", editable: true, editrules: { required: true }, search: true
+                    },
+                    {
+                        name: "Manufacturer", editable: true, editrules: { required: true }, search: true
+                    },
+                    {
+                        name: "RoomNo", editable: true, editrules: { required: true }, search: true
+                    }
+                ],
+                height: '100%',
+                viewrecords: true,
+                caption: 'JQgrid DEMO',
+                emptyrecords: 'No records',
+                rowNum: 10,
+                pager: jQuery('#pager'),
+                rowList: [10, 20, 30, 40],
+                
+                autowidth: true
+            })
+        });
+
+    </script>    
+
+}

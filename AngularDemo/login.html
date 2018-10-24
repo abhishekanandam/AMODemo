@@ -1,0 +1,24 @@
+﻿<div class="container">
+    <form name="loginForm" class="form-horizontal" ng-controller="LoginController" ng-submit="login(credentials)" novalidate>
+
+        <div class="form-group">
+            <label for="inputUserName" class="control-label col-xs-2">User Name:</label>
+            <div class="col-xs-7">
+                <input type="text" name="username" ng-model="credentials.username" class="form-control" id="inputUserName" placeholder="User Name" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.username.$error.required">Username is required!</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword" class="control-label col-xs-2">Password:</label>
+            <div class="col-xs-7">
+                <input type="password" name="password" ng-model="credentials.password" class="form-control" id="inputPassword" placeholder="Password" ng-required="true">
+            </div>
+            <div class="col-xs-3">
+                <span class="label-danger" ng-show="demoForm.password.$error.required">Password is required!</span>
+            </div>
+        </div>
+
+    </form>
+</div>

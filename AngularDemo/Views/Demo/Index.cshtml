@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Demo Index";
+}
+
+<h2>My Demo Index</h2>
+
+<div class="container" ng-app="demoApp">
+    <div class="row" ng-controller="digestCycleDemoController">
+        <div class="col-md-2">
+            <input type="text" ng-bind="searchBox" ng-model="searchBox" />
+        </div>
+        <div class="col-md-2">
+            <span ng-bind="searchBox"></span>
+        </div>
+        <div class="col-md-2">
+            one time binding
+            <span>{{::searchBox}}</span>
+        </div>
+    </div>
+    <div class="row" ng-controller="controllerAsDemo as cntrlAs">
+        <div class="col-md-2">
+            <span ng-bind="cntrlAs.firstName"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <custom-directive></custom-directive>
+        </div>
+    </div>
+</div>

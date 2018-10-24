@@ -1,0 +1,5 @@
+C:\Abhishek\SampleProjects\AMODemo\Interfaces\bin\Debug\Interfaces.dll
+C:\Abhishek\SampleProjects\AMODemo\Interfaces\bin\Debug\Interfaces.pdb
+C:\Abhishek\SampleProjects\AMODemo\Interfaces\obj\Debug\InterfaceClasses.csprojResolveAssemblyReference.cache
+C:\Abhishek\SampleProjects\AMODemo\Interfaces\obj\Debug\Interfaces.dll
+C:\Abhishek\SampleProjects\AMODemo\Interfaces\obj\Debug\Interfaces.pdb

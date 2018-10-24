@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DemoDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DemoDB.dbo.TBurl' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="TBurl">
+    <Key>
+      <PropertyRef Name="URLId" />
+      <PropertyRef Name="EmailAddress" />
+      <PropertyRef Name="PersonalWebsite" />
+      <PropertyRef Name="FullName" />
+      <PropertyRef Name="Gender" />
+    </Key>
+    <Property Name="URLId" Type="int" Nullable="false" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonalWebsite" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="DemoDBModelStoreContainer">
+    <EntitySet Name="TBurl" EntityType="Self.TBurl" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [TBurl].[URLId] AS [URLId], 
+    [TBurl].[EmailAddress] AS [EmailAddress], 
+    [TBurl].[PersonalWebsite] AS [PersonalWebsite], 
+    [TBurl].[FullName] AS [FullName], 
+    [TBurl].[Gender] AS [Gender]
+    FROM [dbo].[TBurl] AS [TBurl]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

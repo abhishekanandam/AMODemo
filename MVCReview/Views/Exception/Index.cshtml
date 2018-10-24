@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@*@Html.Action("ChildAction", new { str = "" })
+
+@{
+    Html.RenderAction("ChildAction", new { str = "" });
+ }*@
+
+@Html.ActionLink("About us redirect", "Redirect", "Exception")
+
+<br />
+
+@Html.ActionLink("About us redirect permanent", "RedirectPermanent", "Exception")
